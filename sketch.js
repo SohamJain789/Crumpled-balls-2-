@@ -36,6 +36,7 @@ function draw() {
   paperBall.display();
   ground.display();
   dustbin.display();
+  
   keyPressed()
   //drawSprites();
  
@@ -44,7 +45,7 @@ function draw() {
 function keyPressed(){
 if (keyCode === UP_ARROW){
 
-Matter.Body.applyForce(paperBall.body,paperBall.body.position,{x:5,y:-10});
+Matter.Body.applyForce(paperBall.body,paperBall.body.position,{x:15,y:-25});
 
 }
 

@@ -25,7 +25,8 @@ translate(pos.x,pos.y);
 
 fill("white");
 ellipseMode(RADIUS);
-
+imageMode(CENTER)
+image(this.image,0,0,this.r,this.r);
 ellipse(0,0,this.r,this.r);
 pop();
 } 
