@@ -4,14 +4,14 @@ constructor(x,y,radius){
     
     isStatic:false,
     restitution:0.3,
-    friction:0.5,
+    friction:0,
     density:1.2
 }
 this.x=x;
 this.y=y;
 this.radius = radius;
 this.image = loadImage("paper.png");
-this.body = Matter.Bodies.circle(this.x,this.y,this.radius/2,options);
+this.body = Bodies.circle(this.x,this.y,(this.radius-20)/2,options);
 
 
 World.add(world,this.body);
@@ -23,11 +23,11 @@ var pos =this.body.position;
 push();
 translate(pos.x,pos.y);
 
-fill("white");
-ellipseMode(RADIUS);
+fill(255,0,255);
+//ellipseMode(RADIUS);
 imageMode(CENTER)
 image(this.image,0,0,this.r,this.r);
-ellipse(0,0,this.r,this.r);
+//ellipse(0,0,this.r,this.r);
 pop();
 } 
 }

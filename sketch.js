@@ -20,7 +20,7 @@ function setup() {
   //Create the Bodies Here.
     //paperBall = new Ball (50,580,20);
     paperBall = new Ball(200,450,70);
-    paperBall.scale = 0.2;
+    //paperBall.scale = 0.2;
     //ground = new Ground (350,790,700,20);
     ground = new Ground(width/2,670,width,20)
     dustbin=new Dustbin(1200,650);
@@ -32,7 +32,7 @@ function setup() {
 
 function draw() {
   rectMode(CENTER);
-  background(0);
+  background(230);
   paperBall.display();
   ground.display();
   dustbin.display();
@@ -45,7 +45,7 @@ function draw() {
 function keyPressed(){
 if (keyCode === UP_ARROW){
 
-Matter.Body.applyForce(paperBall.body,paperBall.body.position,{x:15,y:-25});
+Matter.Body.applyForce(paperBall.body,paperBall.body.position,{x:130,y:-145});
 
 }
 
